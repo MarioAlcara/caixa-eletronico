@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixa Eletrônico Digital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="atm-container">
+        <div id="atm-screen" class="atm-screen">
+            <h1>Caixa Eletrônico Digital</h1>
+            
+            <!-- Tela de Seleção de Valor -->
+            <div id="screen" class="screen">
+                <p id="mensagem">Valor disponível: R$1375,00</p>
+                <p id="resultado">Quanto deseja retirar?</p>
+                <p id="valor-total"></p>
+            </div>
+
+            <div id="keypad" class="keypad">
+                <button class="btn cinza" onclick="adicionarNota(100)">100</button>
+                <button class="btn cinza" onclick="adicionarNota(50)">50</button>
+                <button class="btn cinza" onclick="adicionarNota(20)">20</button>
+                <button class="btn cinza" onclick="adicionarNota(5)">5</button>
+                <button class="btn cinza" onclick="solicitarOutroValor()">Outro Valor</button>
+                <button class="btn vermelho" id="resetar">Cancelar</button>
+                <button class="btn verde" id="confirmar">Confirmar</button>
+                <button class="btn amarelo" id="anular">Anular</button>
+            </div>
+
+            <!-- Tela de Senha -->
+            <div id="password-screen" class="password-screen" style="display:none;">
+                <h2>Digite sua senha</h2>
+                <input type="password" id="senha" disabled />
+                <div class="teclado-numerico">
+                    <button onclick="digitarNumero(1)">1</button>
+                    <button onclick="digitarNumero(2)">2</button>
+                    <button onclick="digitarNumero(3)">3</button>
+                    <button onclick="digitarNumero(4)">4</button>
+                    <button onclick="digitarNumero(5)">5</button>
+                    <button onclick="digitarNumero(6)">6</button>
+                    <button onclick="digitarNumero(7)">7</button>
+                    <button onclick="digitarNumero(8)">8</button>
+                    <button onclick="digitarNumero(9)">9</button>
+                    <button onclick="digitarNumero(0)">0</button>
+                </div>
+                <div class="senha-buttons">
+                    <button id="finalizar">Continuar</button>
+                    <button id="cancelar">Cancelar</button>
+                    <button id="anular-senha">Anular</button>
+                </div>
+            </div>
+
+            <!-- Tela Final -->
+            <div id="final-screen" class="final-screen" style="display:none;">
+                <p>Imprimindo o dinheiro. Aguarde!</p>
+                <button id="ok">OK</button>
+            </div>
+
+            <!-- Tela de Agradecimento -->
+            <div id="thank-you-screen" class="thank-you-screen" style="display:none;">
+                <p>Obrigado por utilizar o caixa eletrônico!</p>
+                <p>Retire o dinheiro no local indicado</p>
+                <button id="retornar-menu">Retornar ao Menu Principal</button>
+                </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

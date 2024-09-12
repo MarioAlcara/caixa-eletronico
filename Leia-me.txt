@@ -1,0 +1,58 @@
+Essa simulação ao caixa eletronico, foi desenvolvido para explorar o sistema de if e else. 
+a ideia aqui é eexplorar de acordo com os codigos como cada um funciona e tem seu comando definido:
+
+Esse código JavaScript gerencia a lógica de um caixa eletrônico digital com a seguinte funcionalidade:
+
+Variáveis Iniciais:
+
+valorSelecionado mantém o valor total selecionado pelo usuário.
+
+valorTotal é o valor total disponível para saque.
+
+senhaDigitada armazena a senha que o usuário está digitando.
+
+Função atualizarValor():
+
+Atualiza a exibição do valor total selecionado na tela com o valor formatado como moeda.
+Função adicionarNota(valor):
+
+Adiciona o valor de uma nota ao valor selecionado, se não exceder o valor total disponível. Atualiza a tela após a adição. Caso contrário, exibe um alerta de excesso.
+Função solicitarOutroValor():
+
+Esconde o teclado numérico e exibe a tela de senha.
+Eventos dos Botões:
+
+Resetar (resetar): Reseta o valor selecionado e atualiza a tela.
+
+Confirmar (confirmar): Verifica se algum valor foi selecionado e, se sim, esconde a tela inicial e exibe a tela de senha.
+
+Anular (anular): Reseta o valor selecionado e volta para a tela inicial, exibindo o teclado numérico novamente.
+
+Digitar Número (digitarNumero(numero)): Adiciona um número à senha digitada e atualiza a exibição da senha como asteriscos.
+
+Finalizar (finalizar): Verifica se a senha tem o comprimento correto (4 dígitos neste caso) e, se sim, esconde a tela de senha e exibe a tela final. Caso contrário, exibe um alerta de senha inválida.
+
+Cancelar (cancelar): Limpa a senha digitada.
+
+Anular Senha (anular-senha): Limpa a senha digitada e volta para a tela inicial.
+
+Confirmação Final (ok): Esconde a tela final e exibe a tela de agradecimento.
+
+Retornar ao Menu Principal (retornar-menu): Limpa o valor selecionado, volta para a tela inicial e exibe o teclado numérico.
+
+Retirar o Dinheiro (ok-retirar): Exibe um alerta para retirar o dinheiro.
+
+Sobre o Loop
+O código não possui um loop explícito como um for ou while. A interação com o usuário é gerenciada através de eventos de clique, que são manipulados pelas funções associadas aos botões. Quando um botão é clicado, a função associada é executada, atualizando a interface conforme necessário. As alterações na tela são feitas com base na lógica definida em cada função e nas interações do usuário, sem a necessidade de um loop contínuo.
+
+
+Anula a operação: opção abaixo, anula opção:
+
+document.getElementById('anular').addEventListener('click', () => {
+    valorSelecionado = 0;
+    atualizarValor();
+    document.getElementById('screen').style.display = 'block';
+    document.getElementById('keypad').style.display = 'flex';
+});
+
+no Script.js tem mais exemplos como codigo acima descritos com cada função: anula opção, digitar um numero e uma senha , finaliza e cancelar autenticação.

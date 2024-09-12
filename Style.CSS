@@ -1,0 +1,203 @@
+/* Centralizar e estilizar a página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Caixa eletrônico */
+.atm-container {
+    background-color: #007bff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 400px;
+}
+
+/* Tela do caixa eletrônico */
+.atm-screen {
+    background-color: #007bff; /* Azul claro */
+    padding: 20px;
+    border-radius: 15px;
+    color: #fff;
+    text-align: center;
+}
+
+h1 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 24px; /* Reduzido o tamanho do título */
+}
+
+.screen {
+    background-color: #00aaff; /* Azul claro para a tela */
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 16px; /* Reduzido o tamanho da fonte na tela */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Estilo do teclado/botões */
+.keypad {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Padronizar tamanho dos botões */
+.btn {
+    background-color: #888;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 14px; /* Reduzido o tamanho da fonte dos botões */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 70px; /* Ajuste para uniformidade */
+    height: 70px; /* Ajuste para uniformidade */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    text-align: center; /* Centraliza o texto dentro do botão */
+    line-height: 1.2; /* Ajusta a linha do texto para centralização vertical */
+}
+
+/* Estilo dos botões específicos */
+.cinza {
+    background-color: #888;
+}
+
+.cinza:hover {
+    background-color: #777;
+}
+
+.verde {
+    background-color: #28a745;
+}
+
+.verde:hover {
+    background-color: #218838;
+}
+
+.vermelho {
+    background-color: #dc3545;
+}
+
+.vermelho:hover {
+    background-color: #c82333;
+}
+
+.amarelo {
+    background-color: #ffc107;
+}
+
+.amarelo:hover {
+    background-color: #e0a800;
+}
+
+/* Tela de Senha */
+.password-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.password-screen input {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Botões da tela de senha */
+.senha-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 300px;
+}
+
+.senha-buttons button {
+    width: 100%;
+    margin: 5px;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+/* Tela Final */
+.final-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    margin-top: 20px;
+}
+
+/* Tela de Agradecimento */
+.thank-you-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    margin-top: 20px;
+}
+
+/* Teclado numérico */
+.teclado-numerico {
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.teclado-numerico button {
+    background-color: #888;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.teclado-numerico button:hover {
+    background-color: #777;
+}
+
+/* Botão 0 centralizado */
+.teclado-numerico button:nth-child(10) {
+    grid-column: span 3;
+    margin: 0;
+    width: 100%;
+}
